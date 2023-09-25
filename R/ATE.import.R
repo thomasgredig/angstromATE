@@ -1,7 +1,12 @@
-#' Imports Angstrom Engineering Thermal Evaporator log data
+#' Imports Angstrom Engineering Thermal Evaporator Log Data
 #'
+#' @param filename path and filename of CSV with ATE log file
+#'
+#' @author Thomas Gredig
+#'
+#' @importFrom utils read.csv
 #' @export
-ATEimport <- function(filename) {
+ATE.import <- function(filename) {
   # checks for file validity
   if (!file.exists(filename)) stop("ATE log file is not found.")
 
