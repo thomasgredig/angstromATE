@@ -3,6 +3,9 @@ pathData = "/Users/gredigcsulb/Library/CloudStorage/OneDrive-SharedLibraries-csu
 fileList = dir(pathData, pattern='csv$', recursive=TRUE)
 fileList = file.path(pathData, fileList)
 
+d = ATE.import(f)
+m = ATE.info(f)
+
 
 r = data.frame()
 r2 = data.frame()
