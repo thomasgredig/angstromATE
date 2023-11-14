@@ -2,7 +2,11 @@
 #'
 #' @param filename full path of ATE Log file
 #' @seealso [ATE.import()]
+#'
+#' @importFrom utils tail
+#'
 #' @author Thomas Gredig
+#'
 #' @export
 ATE.info <- function(filename) {
   d <- ATE.import(filename)

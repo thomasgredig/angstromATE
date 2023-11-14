@@ -1,6 +1,6 @@
 #' Imports Angstrom Engineering Thermal Evaporator Log Data
 #'
-#' @param filename path and filename of CSV with ATE log file
+#' @param filename path and file name of CSV with ATE log file
 #'
 #' @author Thomas Gredig
 #'
@@ -11,7 +11,7 @@ ATE.import <- function(filename) {
   if (!file.exists(filename)) stop("ATE log file is not found.")
 
   # load the log file, need to change one column
-  d = read.csv(f, row.names = NULL)
+  d = read.csv(filename, row.names = NULL)
   names(d) = c(names(d)[-1],"empty")
   d$empty<-NULL
 
@@ -25,3 +25,6 @@ ATE.import <- function(filename) {
 
   d
 }
+
+
+4+4
