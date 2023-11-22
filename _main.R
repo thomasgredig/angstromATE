@@ -1,43 +1,30 @@
 library(angstromATE)
 pathData = "/Users/gredigcsulb/Library/CloudStorage/OneDrive-SharedLibraries-csulb/Gredig Molecular Thin Film Lab - Erin - Erin/RAW/ATE"
-
 pathData = "/Users/gredigcsulb/Library/CloudStorage/OneDrive-csulb/RAW Docs/ATE_Log/Dep"
 fileList = dir(pathData, pattern='xml$', recursive=TRUE)
 fileList = file.path(pathData, fileList)
 basename(fileList)
 
+
+r = data.frame()
 for (f in fileList) {
-  q = ATE.status(f)
-  print(q$msg)
+# for (f in ATE.sampleFiles()) {
+  # print(basename(f))
+  q = ATE.complete(f)
+  if (!is.null(q)) {
+    print(q)
+    q$file = basename(f)
+    r = rbind(r, q)
+  }
 }
 
 
-library(xml2)
-library(dplyr)
-for (i in 50) {
-  f = fileList[i]
-  df <- xmlParse(f)
-  x <- xmlToList(df)
-  xPhase <- x$Layers$RecipeLayer
-  xp = unlist(xPhase)
-  a <- xp[grepl('RecipeActionBaseClass.ActionName',names(xp))]
-  print(a)
-}
 
-
-f = fileList[48]
-f
-grepl('_Status_',f)
-df <- xmlParse(f)
-x <- xmlToList(df)
-xp <- x$RecipeElements
-9*34
-df1 <- as.data.frame(do.call(rbind, xp))
-
-
+fileList = dir(pathData, pattern='csv$', recursive=TRUE)
+fileList = file.path(pathData, fileList)
 # d = ATE.import(f)
 m1 = data.frame()
-for (f in fileList[10:20]) {
+for (f in fileList) {
   cat(".")
   m = ATE.info(f)
   if (length(m)>0) {
@@ -46,8 +33,9 @@ for (f in fileList[10:20]) {
   }
 }
 cat("\n")
+f
+write.csv(m1, file="all-depositions.csv", row.names = FALSE)
 
-head(d)
 head(m)
 
 r = data.frame()

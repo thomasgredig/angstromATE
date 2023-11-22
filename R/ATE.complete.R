@@ -15,11 +15,12 @@
 #'
 #' @examples
 #' fileName <- ATE.sampleFiles('_Complete_')
+#' ATE.complete(fileName, TRUE)
 #' ATE.complete(fileName)
 #'
 #' @export
 ATE.complete <- function(filename, summaryOnly = FALSE) {
-  if (!(grepl('_Complete_',filename) & grepl('xml$', filename))) {
+  if (!((grepl('_Complete_',filename) | grepl('_Original_',filename)) & grepl('xml$', filename))) {
     warning("File is not an ATE XML Complete file.")
     return(NULL)
   }
@@ -30,9 +31,19 @@ ATE.complete <- function(filename, summaryOnly = FALSE) {
   q <- sapply(xp, unlist)
 
   df2 <- data.frame(
-    name = names(df2) <- attr(q,'dimnames')[[1]],
+    name =  attr(q,'dimnames')[[1]],
     value = as.vector(q)
   )
+
+  if (summaryOnly) {
+    # only report a subset of that data:
+    df2 <- data.frame(
+      action = paste( df2$value[grepl("ActionName", df2$name)] , collapse = ', '),
+      ramping = paste( df2$value[grepl("RampRate$", df2$name) | grepl("RampRateTimeUnitDefinition.UnitId.text", df2$name)], collapse = ', '),
+      thickness = paste( df2$value[grepl("TargetThickness", df2$name)] , collapse = ', '),
+      rate = paste( df2$value[grepl("TargetRate", df2$name)] , collapse = ', ')
+    )
+  }
 
   df2
 }

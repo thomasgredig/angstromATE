@@ -7,4 +7,7 @@ test_that("conversion to seconds from string", {
 
   noSeconds = conv2seconds("01:00:40.18163")
   expect_equal(noSeconds, 3600 + 40.18163)
+
+  noSeconds = conv2seconds("1.19:07:06") - conv2seconds("19:07:06")
+  expect_equal(noSeconds, 24*3600)
 })
