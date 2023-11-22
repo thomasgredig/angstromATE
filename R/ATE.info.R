@@ -12,7 +12,7 @@ ATE.info <- function(filename) {
   d <- ATE.import(filename)
 
   m1 <- which(d$SubstrateShutterOpen==TRUE)
-  if (length(m1)==0) next
+  if (length(m1)==0) return(list())
   d1 <- d[m1,]
 
   dInfo <- list(

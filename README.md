@@ -27,6 +27,8 @@ Use the `ATE.import()` function to load a log file.
 
 ``` r
 library(angstromATE)
-
+fileName = ATE.sampleFiles('csv') # sample file
+df <- ATE.import(fileName)
+head(df)
 ```
 

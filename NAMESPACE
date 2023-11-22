@@ -2,6 +2,10 @@
 
 export(ATE.import)
 export(ATE.info)
+export(ATE.sampleFiles)
+export(ATE.status)
 export(conv2seconds)
+importFrom(XML,xmlParse)
+importFrom(XML,xmlToList)
 importFrom(utils,read.csv)
 importFrom(utils,tail)

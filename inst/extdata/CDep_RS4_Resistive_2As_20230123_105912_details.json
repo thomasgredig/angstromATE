@@ -1,0 +1,324 @@
+[
+  {
+    "Header": "CurrentLayer",
+    "Address": "Memory",
+    "Name": "DepSequencer.CurrentLayer",
+    "Type": "Int32",
+    "Unit": ""
+  },
+  {
+    "Header": "CurrentPhase",
+    "Address": "Memory",
+    "Name": "DepSequencer.CurrentPhase",
+    "Type": "Int32",
+    "Unit": ""
+  },
+  {
+    "Header": "StepName",
+    "Address": "Memory",
+    "Name": "DepSequencer.StepName",
+    "Type": "String",
+    "Unit": ""
+  },
+  {
+    "Header": "SequenceRunning",
+    "Address": "gstEngineCtrl[0].bSequenceRunning",
+    "Name": "DepSequencer.SequenceRunning",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "ChamberPressure",
+    "Address": "R_DepChamberCtrl[0].rChamberPressure",
+    "Name": "Chamber[0].Pressure",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "SubstrateShutterOpen",
+    "Address": "gstSubstrateCtrl[0].Shutter.bOpened",
+    "Name": "SeqSubstrate[0].ShutterOpen",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "SubstrateVelocity",
+    "Address": "gstSubstrateCtrl[0].rActualVelocity",
+    "Name": "SeqSubstrate[0].ActualSubstrateVelocity",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Substrate Heater.ActualTemperature",
+    "Address": "gstHeaterCtrl[1].rActualTemp",
+    "Name": "Heater[1].ActualTemperature",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Substrate Heater.CalibrationTC",
+    "Address": "gstHeaterSequenceCtrl[1].rCalibrationTC",
+    "Name": "Heater[1].CalibrationTC",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Substrate Heater.ActualPower",
+    "Address": "gstHeaterCtrl[1].rActualPower",
+    "Name": "Heater[1].ActualPower",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Substrate Heater.Status1",
+    "Address": "gstHeaterCtrl[1].nStatus1",
+    "Name": "Heater[1].Status",
+    "Type": "UInt16",
+    "Unit": ""
+  },
+  {
+    "Header": "Substrate Heater.Status2",
+    "Address": "gstHeaterCtrl[1].nStatus2",
+    "Name": "Heater[1].Status2",
+    "Type": "UInt16",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.ActualThickness",
+    "Address": "W_SourceRateData[4].rActualThickness",
+    "Name": "Source[4].ActualThickness",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.ActualRate",
+    "Address": "W_SourceRateData[4].rActualRate",
+    "Name": "Source[4].ActualRate",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.PercentActualPower",
+    "Address": "Memory",
+    "Name": "Source[4].ActualPower",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.PercentAverageActualPower",
+    "Address": "Memory",
+    "Name": "Source[4].AverageActualPower",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.MaterialName",
+    "Address": "Memory",
+    "Name": "Source[4].MaterialName",
+    "Type": "String",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.SourceError",
+    "Address": "R_SourceCtrl1to7[3].nControlBits[9]",
+    "Name": "Source[4].SourceError",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.ManualMode",
+    "Address": "R_SourceCtrl1to7[3].nControlBits[7]",
+    "Name": "Source[4].ManualMode",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.RatePID_P",
+    "Address": "Memory",
+    "Name": "Source[4].RatePID_P",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.RatePID_I",
+    "Address": "Memory",
+    "Name": "Source[4].RatePID_I",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.RatePID_D",
+    "Address": "Memory",
+    "Name": "Source[4].RatePID_D",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.RateSetpoint",
+    "Address": "Memory",
+    "Name": "Source[4].RateSetpoint",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.PercentPowerSetpoint",
+    "Address": "Memory",
+    "Name": "Source[4].PowerSetpoint",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.OpenShutter",
+    "Address": "gstSourceCtrl[4].Shutter.bOpen",
+    "Name": "Source[4].OpenShutter",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.Status1",
+    "Address": "R_SourceCtrl1to7[3].nStatus1",
+    "Name": "Source[4].Status1",
+    "Type": "UInt16",
+    "Unit": ""
+  },
+  {
+    "Header": "Resistive 4.Status2",
+    "Address": "R_SourceCtrl1to7[3].nStatus2",
+    "Name": "Source[4].Status2",
+    "Type": "UInt16",
+    "Unit": ""
+  },
+  {
+    "Header": "Radak 3, Resistive 4.Thickness",
+    "Address": "Memory",
+    "Name": "Sensor[2].rThickness",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Radak 3, Resistive 4.Rate",
+    "Address": "Memory",
+    "Name": "Sensor[2].rRate",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Radak 3, Resistive 4.OpenShutter",
+    "Address": "gstSensor[2].bOpenShutter",
+    "Name": "Sensor[2].bOpenShutter",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Radak 3, Resistive 4.SensorError",
+    "Address": "gstSensor[2].bSensorError",
+    "Name": "Sensor[2].bSensorError",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.ActiveSensor",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].ActiveSensor",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.ShutteredRateMode",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].bShutteredRateMode",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.Thickness",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rThickness",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.ThicknessMeasurement",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rRawThickness",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.Rate",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rRate",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.RateMeasurement",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rRawRate",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.AverageRate",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rAverageRate",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.FrequencyMeasurement",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rFrequency",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.PercentRemaining",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].rPercentRemaining",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.SensorError",
+    "Address": "gstPhysicalSensor[2].bSensorError",
+    "Name": "PhysicalSensor[2].bSensorError",
+    "Type": "Boolean",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.NominalToolingFactor",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].NominalToolingFactor",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.ToolingFactor",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].ToolingFactor",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.Density",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].Density",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.ZFactor",
+    "Address": "Memory",
+    "Name": "PhysicalSensor[2].ZFactor",
+    "Type": "Double",
+    "Unit": ""
+  },
+  {
+    "Header": "Physical Sensor 2.OpenShutter",
+    "Address": "gstPhysicalSensor[2].bOpenShutter",
+    "Name": "PhysicalSensor[2].bOpenShutter",
+    "Type": "Boolean",
+    "Unit": ""
+  }
+]
