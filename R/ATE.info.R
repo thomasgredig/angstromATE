@@ -1,6 +1,8 @@
 #' Basic Information from Deposition
 #'
 #' @param filename full path of ATE Log file
+#' @param verbose set to TRUE to get additional information
+#'
 #' @seealso [ATE.import()]
 #'
 #' @importFrom utils tail
@@ -8,11 +10,15 @@
 #' @author Thomas Gredig
 #'
 #' @export
-ATE.info <- function(filename) {
+ATE.info <- function(filename, verbose=FALSE) {
+  if (verbose) cat("Loading ATE file:",filename,"\n")
   d <- ATE.import(filename)
 
   m1 <- which(d$SubstrateShutterOpen==TRUE)
-  if (length(m1)==0) return(list())
+  if (length(m1)==0) {
+    if (verbose) cat("Shutter was not opened.\n")
+    return(list())
+  }
   d1 <- d[m1,]
 
   if (length(grep('Radak.3', names(d1)) ) >0) {
