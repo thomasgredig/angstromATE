@@ -1,4 +1,9 @@
-#' Basic Information from Deposition
+#' Basic Information from Thermal Evaporator Deposition
+#'
+#' Imports data from the CSV log file of an Angstrom Engineering
+#' Thermal Evaporator. It extracts information during the
+#' deposition; i.e. while the shutter is open. It returns a condensed
+#' version of the deposition parameters.
 #'
 #' @param filename full path of ATE Log file
 #' @param verbose set to TRUE to get additional information
@@ -13,6 +18,12 @@
 #' @importFrom utils tail
 #'
 #' @author Thomas Gredig
+#'
+#' @return list with information during the deposition that includes the thickness,
+#'       the deposition time in seconds, the starting date, the substrate heater temperature,
+#'       the material deposition temperature, tooling factor, base pressure, the pressure at start of the deposition,
+#'       maximum pressure, and the material name
+#'
 #'
 #' @export
 ATE.info <- function(filename, verbose=FALSE) {

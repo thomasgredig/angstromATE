@@ -1,13 +1,16 @@
 #' ATE Deposition Summary
 #'
+#' Extracts information about the deposition thickness from the completed
+#' status XML file at the end of the deposition.
+#'
 #' @description
 #' Reads an XML Status file from the ATE thermal evaporator and returns
 #' the procedural timeline.
 #'
-#' @param filename path and filename of XML Status file from Angstrom Thermal Evaporator
+#' @param filename XML Status file from Angstrom Thermal Evaporator
 #' @param summaryOnly logical, if \code{TRUE}, returns summary for one layer
 #'
-#' @returns data frame with description steps, start and end times
+#' @returns deposition thickness, rate, ramping times, and actions
 #'
 #' @author Thomas Gredig
 #'

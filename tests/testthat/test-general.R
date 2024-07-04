@@ -14,3 +14,9 @@ test_that("ATE import", {
   expect_equal(dim(df), c(1094, 50))
 })
 
+
+test_that("ATE log file is not found", {
+  fileName <- "nonexistant.filename"
+  expect_error(ATE.import(fileName),
+               "ATE log file is not found.", fixed=TRUE)
+})
