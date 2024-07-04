@@ -5,6 +5,11 @@
 #'
 #' @seealso [ATE.import()]
 #'
+#' @examples
+#' fileName = ATE.sampleFiles("csv")[1]
+#' d = ATE.info(fileName,TRUE)
+#' head(d)
+#'
 #' @importFrom utils tail
 #'
 #' @author Thomas Gredig

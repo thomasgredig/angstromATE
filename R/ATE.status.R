@@ -27,7 +27,7 @@ ATE.status <- function(filename) {
   x <- xmlToList(df)
   x$RecipeElements -> xp
   q <- sapply(xp, unlist)
-  # names(q[[1]])
+
   m <- lapply(q, function(x) { data.frame(desc = x['Description'],
                                           msg = x['MessageCode'],
                                           time.start = x['StartTime'],

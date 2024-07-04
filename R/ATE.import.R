@@ -4,6 +4,11 @@
 #'
 #' @author Thomas Gredig
 #'
+#' @examples
+#' fileName = ATE.sampleFiles("csv")[1]
+#' d = ATE.import(fileName)
+#' head(d)
+#'
 #' @importFrom utils read.csv
 #' @export
 ATE.import <- function(filename) {
@@ -26,5 +31,3 @@ ATE.import <- function(filename) {
   d
 }
 
-
-4+4
