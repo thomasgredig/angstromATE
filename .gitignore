@@ -2,10 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-*.Rd
 .DS_Store
+
+*.Rd
+_*.R
+
 docs/
-CuPc-Calibration.xlsx
-CuPc-Calibration.csv
-_main.R
-all-depositions.csv

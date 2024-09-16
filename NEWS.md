@@ -1,3 +1,7 @@
+# angstromATE 0.1.3
+
+* add additional fields to ATE.complete()
+
 # angstromATE 0.1.2
 
 * initial CRAN submission
