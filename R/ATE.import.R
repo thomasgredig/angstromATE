@@ -25,7 +25,7 @@ ATE.import <- function(filename) {
   d$empty<-NULL
 
   # clean up some columns in the file
-  if (!(d$Version[1] == "5.0.10.10b1b9a6b0")) stop("ATE log file has version that cannot be processed.")
+  if (!(d$Version[1] == "5.0.10.10b1b9a6b0")) warning("ATE log file non standard version.")
   d$Version <- NULL
 
   # Find TRUE/FALSE columns
