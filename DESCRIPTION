@@ -12,7 +12,7 @@ Description: Opens and imports log files from Angstrom Engineering Thermal Evapo
 License: GPL (>= 3)
 BugReports: https://github.com/thomasgredig/angstromATE/issues
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports:
     XML,
     stringr,
