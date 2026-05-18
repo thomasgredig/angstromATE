@@ -1,5 +1,7 @@
 # angstromATE 0.2.1
 
+* update is CRAN ready
+
 # angstromATE 0.2.0
 
 * `ATE.readRecipe()` reads ATE recipe files that end with `.rcp`
