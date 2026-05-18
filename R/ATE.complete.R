@@ -14,7 +14,7 @@
 #'
 #' @author Thomas Gredig
 #'
-#' @importFrom XML xmlParse xmlToList
+#' @importFrom xml2 read_xml
 #' @importFrom stringr str_match_all
 #'
 #' @examples
@@ -29,8 +29,8 @@ ATE.complete <- function(filename, summaryOnly = FALSE) {
     return(NULL)
   }
 
-  df <- xmlParse(filename)
-  x <- xmlToList(df)
+  df <- xml2::read_xml(filename)
+  x <- xml2_to_list(df)
   x$Layers -> xp
   q <- sapply(xp, unlist)
 
@@ -44,6 +44,7 @@ ATE.complete <- function(filename, summaryOnly = FALSE) {
     # extract dates and times from filename
     pattern <- "(20\\d{6})_(\\d{6})"
     date_matches <- str_match_all(filename, pattern)[[1]]
+
     if (nrow(date_matches)==1) { date_matches = rbind(date_matches, date_matches) }
     if (nrow(date_matches) != 2) {stop("AE complete file has no start date encoded.")}
     # only report a subset of that data:
@@ -60,4 +61,23 @@ ATE.complete <- function(filename, summaryOnly = FALSE) {
   }
 
   df2
+}
+
+xml2_to_list <- function(x) {
+  kids <- xml2::xml_children(x)
+
+  if (length(kids) == 0) {
+    txt <- xml2::xml_text(x)
+    return(txt)
+  }
+
+  out <- lapply(kids, xml2_to_list)
+  names(out) <- xml2::xml_name(kids)
+
+  attrs <- xml2::xml_attrs(x)
+  if (length(attrs) > 0) {
+    out$.attrs <- as.list(attrs)
+  }
+
+  out
 }

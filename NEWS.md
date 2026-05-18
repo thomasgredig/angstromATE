@@ -1,8 +1,11 @@
-# angstromATE 0.1.4
+# angstromATE 0.2.0
+
+* `ATE.readRecipe()` reads ATE recipe files that end with `.rcp`
+* use `xml2` instead of `XML`
 
 # angstromATE 0.1.3
 
-* add additional fields to ATE.complete()
+* `ATE.complete()` provides additional fields
 
 # angstromATE 0.1.2
 

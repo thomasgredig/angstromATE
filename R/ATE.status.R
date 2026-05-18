@@ -10,7 +10,7 @@
 #'
 #' @author Thomas Gredig
 #'
-#' @importFrom XML xmlParse xmlToList
+#' @importFrom xml2 read_xml
 #'
 #' @examples
 #' fileName <- ATE.sampleFiles('_Status')
@@ -23,8 +23,8 @@ ATE.status <- function(filename) {
     return(NULL)
   }
 
-  df <- xmlParse(filename)
-  x <- xmlToList(df)
+  df <- xml2::read_xml(filename)
+  x <- xml2_to_list(df)
   x$RecipeElements -> xp
   q <- sapply(xp, unlist)
 

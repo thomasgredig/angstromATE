@@ -1,6 +1,6 @@
 test_that("check sample files are available", {
   fileList <- ATE.sampleFiles()
-  expect_equal(length(fileList), 5)
+  expect_equal(length(fileList), 6)
 })
 
 

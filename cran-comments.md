@@ -1,3 +1,43 @@
+# Resubmission / Update
+
+This is an update to angstromATE version 0.1.3.
+
+In this version:
+
+* added support for reading Angstrom Engineering `.rcp` recipe files;
+* added `ATE.readRecipe()` to extract recipe source name, pre-vacuum pressure,
+  substrate temperature, deposition rate, deposition time, and target thickness;
+* updated documentation and examples;
+* fixed minor issues identified during package checks.
+
+## Test environments
+
+* local R installation, 4.5.3, Mac OS
+* win-builder, R Under development (unstable) (2026-05-15 r90061 ucrt)
+
+
+## R CMD check results
+
+0 errors | 0 warnings | 1 note
+
+* checking CRAN incoming feasibility ... NOTE
+
+  Maintainer: 'Thomas Gredig <tgredig@csulb.edu>'
+
+## Reverse dependencies
+
+There are no reverse dependencies.
+
+
+## Additional comments
+
+This update does not change the existing `ATE.import()` interface.
+
+
+---
+
+# Original Submission
+
 ## Test environments
 
 * local R installation, R 4.4.0
@@ -10,15 +50,3 @@
 * This is a new release.
 
 
-This is a resubmission after CRAN feedback
-
-> If there are references describing the methods in your package, please
-> add these in the description field of your DESCRIPTION file in the form
-> authors (year) <doi:...>
-> authors (year, ISBN:...)
-> or if those are not available: <https:...>
-> with no space after 'doi:', 'https:' and angle brackets for
-> auto-linking. (If you want to add a title as well please put it in
-> quotes: "Title")
-
-* No references describing the methods in this package.
