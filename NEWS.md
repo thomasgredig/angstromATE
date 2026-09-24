@@ -1,6 +1,6 @@
-# angstromATE 0.2.1
+# angstromATE 0.2.2
 
-* update is CRAN ready
+* update some wording and documentation
 
 # angstromATE 0.2.0
 

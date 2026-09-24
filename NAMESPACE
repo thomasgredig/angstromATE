@@ -8,9 +8,13 @@ export(ATE.sampleFiles)
 export(ATE.status)
 export(conv2seconds)
 importFrom(stringr,str_match_all)
-importFrom(utils,read.csv)
-importFrom(utils,tail)
-importFrom(xml2,read_xml)
-importFrom(xml2,xml_find_all)
-importFrom(xml2,xml_find_first)
-importFrom(xml2,xml_text)
+importFrom(utils,
+  read.csv,
+  tail
+)
+importFrom(xml2,
+  read_xml,
+  xml_find_all,
+  xml_find_first,
+  xml_text
+)
