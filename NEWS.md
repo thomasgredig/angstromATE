@@ -1,3 +1,5 @@
+# angstromATE (development version)
+
 # angstromATE 0.2.3
 
 * make description compliant with CRAN submission
